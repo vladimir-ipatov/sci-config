@@ -1,0 +1,14 @@
+Source: sci-config
+Section: admin
+Priority: extra
+Maintainer: Vladimir Ipatov <vs@ipatov.net>
+Uploaders: Vladimir Ipatov <vs@ipatov.net>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+Homepage: https://github.com/vladimir-ipatov/sci-config/
+Vcs-Browser: https://github.com/vladimir-ipatov/sci-config.git
+
+Package: sci-config
+Architecture: all
+Depends: ${misc:Depends}, nut, nut-server, nut-client, ganeti
+Description: config files for SkyCover Infrastructure virtualization hosts

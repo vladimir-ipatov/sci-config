@@ -1,0 +1,18 @@
+#!/bin/sh
+
+PKG=sci-config
+if [ "$1" = configure ] ; then
+        for i in ups.conf nut.conf upssched.conf upsmon.conf; do
+		chown root:nut /etc/sci/$i
+		chmod 640 /etc/sci/$i
+                dpkg-divert --add --package ${PKG} --rename --divert /etc/nut/$i.distrib /etc/nut/$i
+                [ \! -e /etc/nut/$i -o -L /etc/nut/$i ] && ln -sf /etc/sci/$i /etc/nut/$i
+        done
+fi
+# add to sudoers
+if !(grep -q "gnt-node-shutdown" /etc/sudoers) then
+	echo "%nut    ALL=NOPASSWD: /usr/sbin/gnt-node-shutdown.sh" >> /etc/sudoers
+fi
+
+#DEBHELPER#
+exit 0

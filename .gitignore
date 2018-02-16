@@ -1,0 +1,16 @@
+debian/sci-config.default
+debian/sci-config.postinst.debhelper
+debian/sci-config.postrm.debhelper
+debian/sci-config.preinst.debhelper
+debian/sci-config.prerm.debhelper
+debian/sci-config.debhelper.log
+debian/sci-config.substvars
+debian/sci-config
+debian/files
+Makefile
+build-stamp
+install-stamp
+config.log
+config.status
+debian/debhelper-build-stamp
+build

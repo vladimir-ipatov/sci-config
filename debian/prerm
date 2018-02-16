@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+PKG=sci-config
+if [ "$1" = remove ] ; then
+        for i in ups.conf nut.conf upssched.conf upsmon.conf; do
+                [ -L /etc/nut/$i ] && rm /etc/nut/$i
+                dpkg-divert --remove --package ${PKG} --rename --divert /etc/nut/$i.distrib /etc/nut/$i
+        done
+fi
+
+#DEBHELPER#
+exit 0

@@ -1,0 +1,4 @@
+upssched-cmd /usr/sbin
+gnt-node-shutdown.sh /usr/sbin
+ganeti/hooks /etc/ganeti
+nut/* /etc/sci
