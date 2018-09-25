@@ -1,3 +1,11 @@
+sci-config (3.0-2) unstable; urgency=low
+
+  * fix for xen restart
+  * copy ssl cert from master to new node
+  * add deploy ganeti-networks file
+
+ -- Vladimir Ipatov <vs@ipatov.net>  Wed, 14 Mar 2018 23:07:24 +0300
+
 sci-config (3.0-1) unstable; urgency=low
 
   * initial release

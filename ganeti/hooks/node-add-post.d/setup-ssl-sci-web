@@ -1,0 +1,10 @@
+#!/bin/sh
+test -n "$GANETI_NODE_NAME" || exit 0
+GANETI_NODE_HOSTNAME=`echo $GANETI_NODE_NAME|cut -d'.' -f 1`
+if [ "$GANETI_MASTER" = "`hostname`" ]; then
+  # deploy files
+  if [ -e /opt/sci-web/sci_webinterface/settings.py ]; then
+    scp -o GlobalKnownHostsFile=/etc/sci/known_hosts -o UserKnownHostsFile=/etc/sci/known_hosts /etc/nginx/sci-web.crt $GANETI_NODE_HOSTNAME:/etc/nginx
+    scp -o GlobalKnownHostsFile=/etc/sci/known_hosts -o UserKnownHostsFile=/etc/sci/known_hosts /etc/nginx/sci-web.key $GANETI_NODE_HOSTNAME:/etc/nginx
+  fi
+fi
