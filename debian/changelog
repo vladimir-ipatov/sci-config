@@ -1,3 +1,9 @@
+sci-config (3.0-4) unstable; urgency=low
+
+  * add deploy-hosts ganeti hook
+
+ -- Vladimir Ipatov <vs@ipatov.net>  Wed, 14 Mar 2018 23:07:24 +0300
+
 sci-config (3.0-3) unstable; urgency=low
 
   * add apt-preferences for ganeti 2.10
