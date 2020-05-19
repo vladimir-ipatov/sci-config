@@ -10,5 +10,5 @@ Vcs-Browser: https://github.com/vladimir-ipatov/sci-config.git
 
 Package: sci-config
 Architecture: all
-Depends: ${misc:Depends}, nut, nut-server, nut-client, ganeti
+Depends: ${misc:Depends}, nut, nut-server, nut-client, ganeti, apache2-utils
 Description: config files for SkyCover Infrastructure virtualization hosts

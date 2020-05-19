@@ -1,0 +1,5 @@
+#!/bin/sh
+
+invoke-rc.d websockify stop||true
+invoke-rc.d websockify start||true
+
